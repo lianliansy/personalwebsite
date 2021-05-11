@@ -5,16 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>My Website</title>
 </head>
 
 <body>
-    <main>
-        <header><h1>Hi, I'm Siying Chen</h1></<header>
-        <h3>I'm a frontend developer. I love making websites!</h3>
-        <hr>
+    <header>
+           <a id="logo" href="./index.html">My Website</a>
+        <nav>
+            <ul id="navbar">
+            <li><a href="">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#love">Love</a></li>
+            </ul>
+        </nav>
+    </header>
+            <main>
+        <h1>Hi, I'm Siying Chen</h1>
+        <h3 class="description">I'm a frontend developer. I love making websites!</h3>
 
-        <h3>Experience</h3>
+        <hr>
+        
+        <h3 id="experience">Experience</h3>
         <h4>Viscosoft</h4>
         <div>Web Developer Intern</div>
         <div>Jan 2021 - Recent</div>
@@ -27,15 +41,15 @@
        </ul>
         
         <hr>
-        <h3>Education</h3>
+        <h3 id="education">Education</h3>
         <h4>Tech Talent South Charlotte - Web Development Bootcamp</h4>
         <h4>Udemy - Web Developer Bootcamp Online Course</h4>
         <h4>Udemy - JavaScript Online Course</h4>
         <h4>Chong Qing University - International Economics And Trade</h4>
         
         <hr>
-        <h3>Skills</h3>
-        <ul>
+        <h3 id="skills">Skills</h3>
+        <ul class="list">
             <li>html5/css</li>
             <li>javascript</li>
             <li>Jquery</li>
@@ -44,8 +58,8 @@
 
         <hr>
 
-        <h3>Love</h3>
-        <ul>
+        <h3 id="love">Love</h3>
+        <ul class="list">
             <li>travel</li>
             <li>food</li>
             <li>hiking</li>
@@ -54,5 +68,4 @@
         </ul>
     </main>
 </body>
-
 </html>
