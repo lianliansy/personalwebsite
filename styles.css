@@ -189,3 +189,37 @@ li {
 	transform: scale(1.5);
 	opacity: 0;
 }
+
+.postionSection {
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2.3;
+	height: 100vh;
+	padding-top: 80px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
+.sectionExperience h1 {
+	font-size: 30px;
+}
+
+.sectionEducation h1 {
+	font-size: 30px;
+}
+
+.row {
+	text-align: center;
+	display: flex;
+	height: 100vh;
+	justify-content: space-around;
+	align-items: center;
+	line-height: 2.3;
+	padding-top: 80px;
+}
+
+/* .col-1-of-2 {
+	width: calc((100%-2*60)/2);
+	float: left;
+} */
