@@ -60,7 +60,7 @@ button[type="submit"] {
 	margin-top: 10px;
 }
 
-/* #status {
+#status {
 	width: 90%;
 	max-width: 500px;
 	text-align: center;
@@ -93,4 +93,4 @@ button[type="submit"] {
 		opacity: 0;
 		pointer-events: none;
 	}
-} */
+}
