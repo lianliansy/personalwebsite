@@ -1,0 +1,22 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianliansy/personalwebsite.git"
+  },
+  "author": "lianlian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lianliansy/personalwebsite/issues"
+  },
+  "homepage": "https://github.com/lianliansy/personalwebsite#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

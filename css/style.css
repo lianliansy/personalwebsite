@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  background-color: #212529;
+  box-sizing: border-box; }
+
+#navbar a {
+  color: #edf0f1;
+  text-decoration: none;
+  letter-spacing: .2rem;
+  position: relative; }
+
+#navbar li {
+  display: inline-block;
+  padding: 0 2rem; }
+
+.linkHover a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: .2rem;
+  bottom: 0;
+  background-color: #edf0f1;
+  visibility: hidden;
+  transition: all .3s ease-in-out; }
+
+.linkHover a:hover::before {
+  visibility: visible;
+  width: 100%; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  width: 100vw; }
+  .header__logo {
+    color: #edf0f1;
+    text-decoration: none;
+    font-size: 2.5rem; }
+
+li {
+  list-style: none; }
+
+.list li {
+  text-transform: uppercase; }
+
+#background {
+  background-image: linear-gradient(rgba(155, 150, 149, 0.8), rgba(246, 243, 243, 0.8)), url(https://images.unsplash.com/photo-1599953941123-8f16f4d399ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  height: 100vh;
+  background-size: cover;
+  background-position: top; }
+
+.mainContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.heading-main {
+  display: block;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  margin-bottom: 1.5rem;
+  animation: move-in-left 1s ease-out; }
+
+.heading-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  margin-bottom: 2.5rem;
+  animation: move-in-right 1s ease-out; }
+
+@keyframes move-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes move-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #fff;
+  color: #212529;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 5rem;
+  transition: all .3s;
+  position: relative;
+  animation: move-in-bottom .5s ease-out; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5rem;
+  transition: all .4s; }
+
+.postionSection {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2.3;
+  height: 100vh;
+  padding-top: 8rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center; }
+
+.sectionExperience {
+  color: #fff; }
+  .sectionExperience h1 {
+    font-size: 3rem; }
+
+.sectionEducation {
+  color: #fff; }
+  .sectionEducation h1 {
+    font-size: 3rem; }
+
+.row {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 2.3;
+  padding-top: 8rem;
+  color: #fff; }
+
+/* .col-1-of-2 {
+	width: calc((100%-2*60)/2);
+	float: left;
+} */
+.footer {
+  background-color: #f5efe1;
+  display: flex;
+  justify-content: space-around;
+  height: 15rem;
+  align-items: center; }
+  .footer-item {
+    display: inline-block;
+    margin: 0 2rem;
+    position: relative; }
+  .footer a {
+    color: #212529;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.7rem; }
+
+.footer .backtotop {
+  transition: all 1s ease; }
+  .footer .backtotop:hover {
+    letter-spacing: .15rem; }
+
+.blackUnderline a::before {
+  background-color: #212529; }
