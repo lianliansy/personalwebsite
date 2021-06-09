@@ -1,3 +1,12 @@
+/* 
+0 - 600px:     Phone
+600 - 900px:   tab-port
+900 - 1200px:  tab-land
+1200 - 1800px:  normal destop
+1800px +:       big-desktop 
+
+1em = 16px
+*/
 *,
 *::before,
 *::after {
@@ -7,6 +16,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -25,6 +43,12 @@ body {
 #navbar li {
   display: inline-block;
   padding: 0 2rem; }
+  @media (max-width: 56.25em) {
+    #navbar li {
+      padding: 0 1.5rem; } }
+  @media (max-width: 37.5em) {
+    #navbar li {
+      padding: 0 1rem; } }
 
 .linkHover a::before {
   content: "";
@@ -52,7 +76,10 @@ body {
   .header__logo {
     color: #edf0f1;
     text-decoration: none;
-    font-size: 2.5rem; }
+    font-size: 2.3rem; }
+    @media (max-width: 37.5em) {
+      .header__logo {
+        font-size: 2rem; } }
 
 li {
   list-style: none; }
@@ -80,6 +107,18 @@ li {
   letter-spacing: 1rem;
   margin-bottom: 1.5rem;
   animation: move-in-left 1s ease-out; }
+  @media (max-width: 75em) {
+    .heading-main {
+      letter-spacing: .7rem;
+      font-size: 4rem; } }
+  @media (max-width: 56.25em) {
+    .heading-main {
+      letter-spacing: .5rem;
+      font-size: 3.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-main {
+      letter-spacing: .3rem;
+      font-size: 3rem; } }
 
 .heading-sub {
   display: block;
@@ -165,13 +204,34 @@ li {
 
 .sectionExperience {
   color: #fff; }
+  @media (max-width: 37.5em) {
+    .sectionExperience {
+      padding: 0 3rem; } }
   .sectionExperience h1 {
     font-size: 3rem; }
+    @media (max-width: 56.25em) {
+      .sectionExperience h1 {
+        font-size: 2.5rem; } }
+    @media (max-width: 37.5em) {
+      .sectionExperience h1 {
+        font-size: 2rem; } }
+  @media (max-width: 37.5em) {
+    .sectionExperience h3 {
+      font-size: 1.7rem; } }
 
 .sectionEducation {
   color: #fff; }
+  @media (max-width: 37.5em) {
+    .sectionEducation {
+      padding: 0 3rem; } }
   .sectionEducation h1 {
     font-size: 3rem; }
+    @media (max-width: 56.25em) {
+      .sectionEducation h1 {
+        font-size: 2.5rem; } }
+    @media (max-width: 37.5em) {
+      .sectionEducation h1 {
+        font-size: 2rem; } }
 
 .row {
   text-align: center;
@@ -187,16 +247,95 @@ li {
 	width: calc((100%-2*60)/2);
 	float: left;
 } */
+.form {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.container {
+  box-shadow: 0 0 20px #000000;
+  background-color: white;
+  border-radius: .8rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 50rem;
+  padding: 2rem; }
+
+.form-group {
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.5rem; }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.5rem;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: .5rem; }
+
+textarea {
+  resize: vertical; }
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  border-radius: .8rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  margin-top: 1rem; }
+
+#status {
+  width: 90%;
+  max-width: 50rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: .8rem; }
+
+.success {
+  background-color: #d3fa99;
+  animation: status 4s ease forwards; }
+
+.error {
+  background-color: #fa815c;
+  color: white;
+  animation: status 4s ease forwards; }
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all; }
+  90% {
+    opacity: 1;
+    pointer-events: all; }
+  100% {
+    opacity: 0;
+    pointer-events: none; } }
+
 .footer {
   background-color: #f5efe1;
   display: flex;
   justify-content: space-around;
   height: 15rem;
   align-items: center; }
+  @media (max-width: 37.5em) {
+    .footer {
+      flex-direction: column;
+      justify-content: center; } }
   .footer-item {
     display: inline-block;
     margin: 0 2rem;
     position: relative; }
+    @media (max-width: 37.5em) {
+      .footer-item {
+        margin: 0 1rem; } }
   .footer a {
     color: #212529;
     text-decoration: none;
