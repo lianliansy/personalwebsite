@@ -156,6 +156,30 @@ li {
   margin-bottom: 2.5rem;
   animation: move-in-right 1s ease-out; }
 
+.heading-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8rem; }
+  @media (max-width: 56.25em) {
+    .heading-list {
+      display: block; } }
+  @media (max-width: 37.5em) {
+    .heading-list {
+      display: block; } }
+  .heading-list a {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 220%;
+    transition: all .4s;
+    animation: move-in-bottom .5s ease-out; }
+    .heading-list a:hover {
+      background-position: 100%; }
+
 @keyframes move-in-left {
   0% {
     opacity: 0;
