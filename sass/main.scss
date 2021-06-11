@@ -71,25 +71,66 @@ body {
 	box-sizing: border-box;
 }
 
-#navbar {
-	a {
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color-main-dark;
+	padding: 1.5rem 1rem;
+	position: fixed;
+	width: 100vw;
+
+	&__logo {
 		color: $color-main-light;
 		text-decoration: none;
-		letter-spacing: .2rem;
-		position: relative;
-	}
+		font-size: 2.3rem;
 
-	li {
-		display: inline-block;
-		padding: 0 2rem;
-
-		@include respond (tab-port) {
-			padding: 0 1.5rem;
-		}
 		@include respond (phone) {
-			padding: 0 1rem;
+			font-size: 2rem;
+			margin-left: 3rem;
 		}
 	}
+	&__list {
+		a {
+			color: $color-main-light;
+			text-decoration: none;
+			letter-spacing: .2rem;
+			position: relative;
+		}
+
+		li {
+			display: inline-block;
+			padding: 0 2rem;
+
+			@include respond (tab-port) {
+				padding: 0 1.5rem;
+			}
+			@include respond (phone) {
+				display: block;
+				margin: 5rem 0;
+				line-height: 3rem;
+			}
+		}
+
+		@include respond (phone) {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			top: 7rem;
+			left: -100%;
+			text-align: center;
+			background-color: $color-main-dark;
+			transition: all .5s;
+		}
+	}
+}
+
+li {
+	list-style: none;
+}
+
+.list li {
+	text-transform: uppercase;
 }
 
 .linkHover a::before {
@@ -109,32 +150,26 @@ body {
 	width: 100%;
 }
 
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: $color-main-dark;
-	padding: 1.5rem 1rem;
-	position: fixed;
-	width: 100vw;
+.checkbtn {
+	font-size: 2.5rem;
+	color: $color-main-light;
+	float: right;
+	margin-right: 4rem;
+	cursor: pointer;
+	display: none;
 
-	&__logo {
-		color: $color-main-light;
-		text-decoration: none;
-		font-size: 2.3rem;
-
-		@include respond (phone) {
-			font-size: 2rem;
-		}
+	@include respond (phone) {
+		display: block;
 	}
 }
 
-li {
-	list-style: none;
-}
-
-.list li {
-	text-transform: uppercase;
+#check {
+	display: none;
+	@include respond (phone) {
+		&:checked ~ .navbar__list {
+			left: 0;
+		}
+	}
 }
 
 #background {

@@ -8,20 +8,27 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>My Website</title>
 </head>
 
 <body>
-    <header class="header">
-           <a class="header__logo" href="./index.html">My Website</a>
-        <nav>
-            <ul id="navbar" class="linkHover">
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="check" onclick="checkMe()">
+            <a class="navbar__logo" href="./index.html">My Website</a>
+        
+            <ul class="navbar__list linkHover">
             <li><a href="">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
             </ul>
+  
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
         </nav>
     </header>
         <main>
@@ -129,6 +136,7 @@
         </div>
     </footer>
 
+    <script src="./index.js"></script>
     <script src="./contact.js"></script>
 </body>
 </html>
