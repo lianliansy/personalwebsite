@@ -2,6 +2,7 @@ $color-main-dark: #212529;
 $color-main-light: #edf0f1;
 $color-white: #fff;
 $color-black: #000;
+$color-showCase-button: #3d3d3e;
 
 //Media Query Manager
 /* 
@@ -307,51 +308,51 @@ li {
 	}
 }
 
-.btn {
-	&:link,
-	&:visited {
-		text-transform: uppercase;
-		text-decoration: none;
-		background-color: $color-white;
-		color: $color-main-dark;
-		padding: 1rem 4rem;
-		display: inline-block;
-		border-radius: 5rem;
-		transition: all .3s;
-		position: relative;
+// .btn {
+// 	&:link,
+// 	&:visited {
+// 		text-transform: uppercase;
+// 		text-decoration: none;
+// 		background-color: $color-white;
+// 		color: $color-main-dark;
+// 		padding: 1rem 4rem;
+// 		display: inline-block;
+// 		border-radius: 5rem;
+// 		transition: all .3s;
+// 		position: relative;
 
-		animation: move-in-bottom .5s ease-out;
-	}
+// 		animation: move-in-bottom .5s ease-out;
+// 	}
 
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 1rem 2rem rgba($color-black, .2);
+// 	&:hover {
+// 		transform: translateY(-3px);
+// 		box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
-		&::after {
-			transform: scale(1.5);
-			opacity: 0;
-		}
-	}
+// 		&::after {
+// 			transform: scale(1.5);
+// 			opacity: 0;
+// 		}
+// 	}
 
-	&:active {
-		transform: translateY(-1px);
-		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
-	}
+// 	&:active {
+// 		transform: translateY(-1px);
+// 		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+// 	}
 
-	&::after {
-		content: "";
-		display: inline-block;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		background-color: $color-white;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		border-radius: 5rem;
-		transition: all .4s;
-	}
-}
+// 	&::after {
+// 		content: "";
+// 		display: inline-block;
+// 		height: 100%;
+// 		width: 100%;
+// 		position: absolute;
+// 		background-color: $color-white;
+// 		top: 0;
+// 		left: 0;
+// 		z-index: -1;
+// 		border-radius: 5rem;
+// 		transition: all .4s;
+// 	}
+// }
 
 .postionSection {
 	margin: 0 auto;
@@ -404,23 +405,19 @@ li {
 	}
 }
 
-.row {
+.sectionSkills {
 	text-align: center;
 	display: flex;
 	height: 100vh;
 	justify-content: space-around;
 	align-items: center;
 	line-height: 2.3;
-	padding-top: 8rem;
 	color: $color-white;
+	padding-top: 10rem;
 }
 
-/* .col-1-of-2 {
-	width: calc((100%-2*60)/2);
-	float: left;
-} */
-
 .form {
+	padding-top: 8rem;
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -546,4 +543,70 @@ button[type="submit"] {
 
 .blackUnderline a::before {
 	background-color: $color-main-dark;
+}
+
+.showCase {
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 8rem;
+
+	.right {
+		width: 50rem;
+	}
+
+	.left > button {
+		font-size: 2rem;
+	}
+}
+
+.css {
+	position: relative;
+	width: 200px;
+
+	&_btn {
+		background-color: $color-showCase-button;
+		font-size: 1.5rem;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $color-main-light;
+			color: $color-black;
+		}
+	}
+
+	&_btn,
+	.links {
+		padding: 12px;
+		border: none;
+		outline: none;
+		width: 150px;
+		color: $color-white;
+		transition: .3s;
+	}
+
+	&_list {
+		position: absolute;
+		color: $color-white;
+		transition: all 0.4s ease;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: .3s;
+	}
+
+	.newlist {
+		transform: scaleY(1);
+	}
+
+	.links {
+		background-color: $color-main-light;
+		color: $color-black;
+		font-size: 1.5rem;
+
+		&:hover {
+			background-color: $color-white;
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+	}
 }

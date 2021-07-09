@@ -208,42 +208,6 @@ li {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link, .btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #fff;
-  color: #212529;
-  padding: 1rem 4rem;
-  display: inline-block;
-  border-radius: 5rem;
-  transition: all .3s;
-  position: relative;
-  animation: move-in-bottom .5s ease-out; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scale(1.5);
-    opacity: 0; }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 5rem;
-  transition: all .4s; }
-
 .postionSection {
   margin: 0 auto;
   text-align: center;
@@ -285,21 +249,18 @@ li {
       .sectionEducation h1 {
         font-size: 2rem; } }
 
-.row {
+.sectionSkills {
   text-align: center;
   display: flex;
   height: 100vh;
   justify-content: space-around;
   align-items: center;
   line-height: 2.3;
-  padding-top: 8rem;
-  color: #fff; }
+  color: #fff;
+  padding-top: 10rem; }
 
-/* .col-1-of-2 {
-	width: calc((100%-2*60)/2);
-	float: left;
-} */
 .form {
+  padding-top: 8rem;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -401,3 +362,49 @@ button[type="submit"] {
 
 .blackUnderline a::before {
   background-color: #212529; }
+
+.showCase {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 8rem; }
+  .showCase .right {
+    width: 50rem; }
+  .showCase .left > button {
+    font-size: 2rem; }
+
+.css {
+  position: relative;
+  width: 200px; }
+  .css_btn {
+    background-color: #3d3d3e;
+    font-size: 1.5rem;
+    cursor: pointer; }
+    .css_btn:hover {
+      background-color: #edf0f1;
+      color: #000; }
+  .css_btn,
+  .css .links {
+    padding: 12px;
+    border: none;
+    outline: none;
+    width: 150px;
+    color: #fff;
+    transition: .3s; }
+  .css_list {
+    position: absolute;
+    color: #fff;
+    transition: all 0.4s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .3s; }
+  .css .newlist {
+    transform: scaleY(1); }
+  .css .links {
+    background-color: #edf0f1;
+    color: #000;
+    font-size: 1.5rem; }
+    .css .links:hover {
+      background-color: #fff;
+      transform: scale(1.1);
+      cursor: pointer; }

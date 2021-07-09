@@ -15,8 +15,8 @@
 <body>
     <header>
         <nav class="navbar">
-            <input type="checkbox" id="check" onclick="checkMe()">
-            <a class="navbar__logo" href="./index.html">My Website</a>
+            <input type="checkbox" id="check"">
+            <a class="navbar__logo" href="./index.html">Siying Chen</a>
         
             <ul class="navbar__list linkHover">
             <li><a href="">About</a></li>
@@ -71,31 +71,45 @@
         <h4>Udemy - JavaScript Online Course</h4>
         <h4>Chong Qing University - International Economics And Trade</h4>
 </section>
-     
-    <div class="row">
 
-        <div class="col-1-of-2">
-        <h3 id="skills">Skills</h3>
-        <ul class="list">
-            <li>HTML5</li>
-            <li>CSS/Sass</li>
-            <li>Javascript</li>
-            <li>Jquery</li>
-            <li>Bootstrap</li>
-        </ul>
-</div>
+    <section class="showCase">
+        <div class="left">
+            <div class="css">
+            <button class="css_btn">CSS</button>
+            <div class="css_list">
+                <button class="links" id="btn-flexbox">Flexbox</button>
+                <button class="links" id="btn-grid">Grid</button>
+            </div>
+            </div>  
+        </div>
+        <div class="right">
+<iframe id="iframe" height="500px" style="width: 100%;" src="https://codepen.io/LianLianC/embed/VwbaGNm?defaultTab=result" scrolling="no" title="CSS Flexbox gallery" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+        </div>
+    </section>
+     
+    <section class="sectionSkills" id="skills">
+        <div>
+            <h3>Skills</h3>
+                <ul class="list">
+                    <li>HTML5</li>
+                    <li>CSS/Sass</li>
+                    <li>Javascript</li>
+                    <li>Jquery</li>
+                    <li>Bootstrap</li>
+                </ul>
+        </div>
       
- <div class="col-1-of-2">
-        <h3 id="love">Love</h3>
-        <ul class="list">
-            <li>travel</li>
-            <li>food</li>
-            <li>hiking</li>
-            <li>shopping</li>
-            <li>movies</li>
-        </ul>
-     </div>
-</div>
+        <div>
+            <h3>Love</h3>
+                <ul class="list">
+                    <li>travel</li>
+                    <li>food</li>
+                    <li>hiking</li>
+                    <li>shopping</li>
+                    <li>movies</li>
+                </ul>
+        </div>
+    </section>
     
 <section class="form" id="contact">
         <div class="container">
@@ -103,17 +117,17 @@
 
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
                 </div>
 
                 <div class="form-group">
@@ -143,6 +157,8 @@
         </div>
     </footer>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./index.js"></script>
     <script src="./contact.js"></script>
 </body>
