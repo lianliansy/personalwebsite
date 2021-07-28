@@ -162,7 +162,8 @@ li {
   margin-top: 8rem; }
   @media (max-width: 56.25em) {
     .heading-list {
-      display: block; } }
+      display: block;
+      line-height: 4rem; } }
   @media (max-width: 37.5em) {
     .heading-list {
       display: block; } }
@@ -217,20 +218,24 @@ li {
   display: flex;
   flex-flow: column wrap;
   justify-content: center; }
+  @media (max-width: 56.25em) {
+    .postionSection {
+      padding-top: 0; } }
+
+h1 {
+  font-size: 3rem; }
+  @media (max-width: 56.25em) {
+    h1 {
+      font-size: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    h1 {
+      font-size: 2rem; } }
 
 .sectionExperience {
   color: #fff; }
   @media (max-width: 37.5em) {
     .sectionExperience {
       padding: 0 3rem; } }
-  .sectionExperience h1 {
-    font-size: 3rem; }
-    @media (max-width: 56.25em) {
-      .sectionExperience h1 {
-        font-size: 2.5rem; } }
-    @media (max-width: 37.5em) {
-      .sectionExperience h1 {
-        font-size: 2rem; } }
   @media (max-width: 37.5em) {
     .sectionExperience h3 {
       font-size: 1.7rem; } }
@@ -240,14 +245,63 @@ li {
   @media (max-width: 37.5em) {
     .sectionEducation {
       padding: 0 3rem; } }
-  .sectionEducation h1 {
-    font-size: 3rem; }
+
+.showcase {
+  height: 100vh;
+  padding-top: 8rem; }
+  .showcase h1 {
+    color: #fff;
+    text-align: center; }
+  .showcase .show {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8rem; }
     @media (max-width: 56.25em) {
-      .sectionEducation h1 {
-        font-size: 2.5rem; } }
-    @media (max-width: 37.5em) {
-      .sectionEducation h1 {
-        font-size: 2rem; } }
+      .showcase .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
+    .showcase .show .right {
+      width: 50rem; }
+      .showcase .show .right #iframe {
+        height: 50rem;
+        width: 100%; }
+    .showcase .show .left > button {
+      font-size: 2rem; }
+
+.css {
+  position: relative;
+  width: 20rem; }
+  @media (max-width: 56.25em) {
+    .css {
+      margin-bottom: 20rem;
+      width: auto; } }
+  .css_btn {
+    background-color: #3d3d3e;
+    font-size: 1.5rem;
+    cursor: pointer; }
+  .css_btn,
+  .css .links {
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+    width: 15rem;
+    color: #fff;
+    transition: .3s; }
+  .css_list {
+    position: absolute;
+    color: #fff;
+    transition: all 0.4s ease;
+    transform-origin: top;
+    transition: .3s; }
+  .css .links {
+    background-color: #edf0f1;
+    color: #000;
+    font-size: 1.5rem; }
+    .css .links:hover {
+      background-color: #fff;
+      transform: scale(1.1);
+      cursor: pointer; }
 
 .sectionSkills {
   text-align: center;
@@ -362,49 +416,3 @@ button[type="submit"] {
 
 .blackUnderline a::before {
   background-color: #212529; }
-
-.showCase {
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 8rem; }
-  .showCase .right {
-    width: 50rem; }
-  .showCase .left > button {
-    font-size: 2rem; }
-
-.css {
-  position: relative;
-  width: 200px; }
-  .css_btn {
-    background-color: #3d3d3e;
-    font-size: 1.5rem;
-    cursor: pointer; }
-    .css_btn:hover {
-      background-color: #edf0f1;
-      color: #000; }
-  .css_btn,
-  .css .links {
-    padding: 12px;
-    border: none;
-    outline: none;
-    width: 150px;
-    color: #fff;
-    transition: .3s; }
-  .css_list {
-    position: absolute;
-    color: #fff;
-    transition: all 0.4s ease;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: .3s; }
-  .css .newlist {
-    transform: scaleY(1); }
-  .css .links {
-    background-color: #edf0f1;
-    color: #000;
-    font-size: 1.5rem; }
-    .css .links:hover {
-      background-color: #fff;
-      transform: scale(1.1);
-      cursor: pointer; }
