@@ -120,7 +120,7 @@ body {
 			top: 7rem;
 			left: -100%;
 			text-align: center;
-			background-color: $color-main-dark;
+			background-color: #555555;
 			transition: all .5s;
 		}
 	}
@@ -186,7 +186,7 @@ li {
 
 .mainContent {
 	position: absolute;
-	top: 50%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
@@ -195,7 +195,7 @@ li {
 .heading {
 	&-main {
 		display: block;
-		font-size: 5rem;
+		font-size: 4.5rem;
 		font-weight: 400;
 		letter-spacing: 1rem;
 		margin-bottom: 1.5rem;
@@ -229,11 +229,12 @@ li {
 	&-list {
 		display: flex;
 		justify-content: space-around;
-		margin-top: 8rem;
+		margin-top: 6rem;
 
 		@include respond (tab-port) {
 			display: block;
 			line-height: 4rem;
+			margin: 3rem 0;
 		}
 
 		@include respond (phone) {
@@ -262,6 +263,14 @@ li {
 				background-position: 100%;
 			}
 		}
+	}
+}
+
+.summary {
+	margin-top: 5.5rem;
+
+	@include respond (tab-port) {
+		margin-top: 3rem;
 	}
 }
 
@@ -309,51 +318,53 @@ li {
 	}
 }
 
-// .btn {
-// 	&:link,
-// 	&:visited {
-// 		text-transform: uppercase;
-// 		text-decoration: none;
-// 		background-color: $color-white;
-// 		color: $color-main-dark;
-// 		padding: 1rem 4rem;
-// 		display: inline-block;
-// 		border-radius: 5rem;
-// 		transition: all .3s;
-// 		position: relative;
+.hireMe {
+	margin-top: 3rem;
+	&:link,
+	&:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		background-color: $color-white;
+		color: $color-main-dark;
+		padding: 1rem 4rem;
+		display: inline-block;
+		font-weight: 500;
+		border-radius: 5rem;
+		transition: all .3s;
+		position: relative;
 
-// 		animation: move-in-bottom .5s ease-out;
-// 	}
+		animation: move-in-bottom .5s ease-out;
+	}
 
-// 	&:hover {
-// 		transform: translateY(-3px);
-// 		box-shadow: 0 1rem 2rem rgba($color-black, .2);
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
-// 		&::after {
-// 			transform: scale(1.5);
-// 			opacity: 0;
-// 		}
-// 	}
+		&::after {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+	}
 
-// 	&:active {
-// 		transform: translateY(-1px);
-// 		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
-// 	}
+	&:active {
+		transform: translateY(-1px);
+		box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+	}
 
-// 	&::after {
-// 		content: "";
-// 		display: inline-block;
-// 		height: 100%;
-// 		width: 100%;
-// 		position: absolute;
-// 		background-color: $color-white;
-// 		top: 0;
-// 		left: 0;
-// 		z-index: -1;
-// 		border-radius: 5rem;
-// 		transition: all .4s;
-// 	}
-// }
+	&::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		background-color: $color-white;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 5rem;
+		transition: all .4s;
+	}
+}
 
 .postionSection {
 	margin: 0 auto;
@@ -366,7 +377,7 @@ li {
 	justify-content: center;
 
 	@include respond (tab-port) {
-		padding-top: 0;
+		padding: 0 3rem;
 	}
 }
 
@@ -380,11 +391,29 @@ h1 {
 	}
 }
 
+.contact {
+	height: 25rem;
+	background-color: #6e7889;
+	color: $color-white;
+	text-align: center;
+
+	#contact {
+		padding: 4rem 0;
+	}
+
+	.fab {
+		color: white;
+		font-size: 3rem;
+		padding: 0 6rem;
+	}
+
+	p {
+		padding: 2rem 0;
+	}
+}
+
 .sectionExperience {
 	color: $color-white;
-	@include respond (phone) {
-		padding: 0 3rem;
-	}
 
 	h3 {
 		@include respond (phone) {
@@ -395,10 +424,6 @@ h1 {
 
 .sectionEducation {
 	color: $color-white;
-
-	@include respond (phone) {
-		padding: 0 3rem;
-	}
 }
 
 .showcase {
