@@ -1,13 +1,26 @@
 const checkbox = document.querySelector('#check');
 const mainContent = document.querySelector('.mainContent');
+const css = document.querySelector('.css');
 
 checkbox.addEventListener('click', () => {
     if(checkbox.checked) {
         mainContent.style.display = "none";
+        css.style.display = "none";
     } else {
         mainContent.style.display = "block";
+        css.style.display = "block";
     }
 })
+
+const links = document.getElementsByTagName('a');
+
+for(const link of links) {
+    link.addEventListener('click', () =>{
+        checkbox.checked = false;
+        mainContent.style.display = "block";
+        css.style.display = "block";
+    })
+}
 
 
 const btnFlexbox = document.querySelector('#btn-flexbox');
@@ -27,9 +40,3 @@ btnAnimation.addEventListener('click', () => {
     iframe.setAttribute("src", "https://codepen.io/LianLianC/embed/VwbPmEa?default-tab=result");
 })
 
-const cssBtn = document.querySelector('.css_btn');
-const list = document.querySelector('.css_list');
-
-// cssBtn.addEventListener('click', () => {
-//     list.classList.toggle('newlist');
-// })
