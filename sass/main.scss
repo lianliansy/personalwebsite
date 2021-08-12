@@ -38,6 +38,16 @@ $color-showCase-button: #3d3d3e;
 	}
 }
 
+@mixin postionShowcaseLeft {
+	position: relative;
+	width: 20rem;
+
+	@include respond (tab-port) {
+		margin: 0 10rem 20rem 0;
+		width: auto;
+	}
+}
+
 *,
 *::before,
 *::after {
@@ -455,30 +465,25 @@ h1 {
 			}
 		}
 
+		.left {
+			display: flex;
+			justify-content: space-around;
+		}
+
 		.left > button {
 			font-size: 2rem;
 		}
 	}
-}
 
-.css {
-	position: relative;
-	width: 20rem;
-
-	@include respond (tab-port) {
-		margin-bottom: 20rem;
-		width: auto;
+	.css,
+	.js {
+		@include postionShowcaseLeft;
 	}
 
 	&_btn {
 		background-color: $color-showCase-button;
 		font-size: 1.5rem;
 		cursor: pointer;
-
-		// &:hover {
-		// 	background-color: $color-main-light;
-		// 	color: $color-black;
-		// }
 	}
 
 	&_btn,
@@ -498,21 +503,17 @@ h1 {
 		// transform: scaleY(0);
 		transform-origin: top;
 		transition: .3s;
-	}
 
-	// .newlist {
-	// 	transform: scaleY(1);
-	// }
+		.links {
+			background-color: $color-main-light;
+			color: $color-black;
+			font-size: 1.5rem;
 
-	.links {
-		background-color: $color-main-light;
-		color: $color-black;
-		font-size: 1.5rem;
-
-		&:hover {
-			background-color: $color-white;
-			transform: scale(1.1);
-			cursor: pointer;
+			&:hover {
+				background-color: $color-white;
+				transform: scale(1.1);
+				cursor: pointer;
+			}
 		}
 	}
 }
