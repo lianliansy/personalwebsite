@@ -28,6 +28,7 @@ const btnGrid = document.querySelector('#btn-grid');
 const btnAnimation = document.querySelector('#btn-animation');
 const btnCountdown = document.querySelector('#btn-countdown');
 const btnQuiz = document.querySelector('#btn-quiz');
+const btnRecipe = document.querySelector('#btn-recipe');
 const iframe = document.querySelector('#iframe');
 
 btnFlexbox.addEventListener('click', ()=>{
@@ -48,4 +49,8 @@ btnCountdown.addEventListener('click', () => {
 
 btnQuiz.addEventListener('click', () => {
     iframe.setAttribute("src", "https://codepen.io/LianLianC/embed/bGWzbYv?default-tab=result");
+})
+
+btnRecipe.addEventListener('click', () => {
+    iframe.setAttribute("src", "https://codepen.io/LianLianC/embed/VwbOKQX?default-tab=result");
 })
