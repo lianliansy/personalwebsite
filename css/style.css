@@ -170,8 +170,8 @@ li {
       display: block; } }
   .heading-list a {
     text-transform: uppercase;
-    font-size: 1.8rem;
-    padding: 1rem 2.5rem;
+    font-size: 1.6rem;
+    padding: 1rem 1.8rem;
     cursor: pointer;
     text-decoration: none;
     color: #000;
@@ -329,7 +329,7 @@ h1 {
     @media (max-width: 56.25em) {
       .showcase .css,
       .showcase .js {
-        margin: 0 10rem 20rem 0;
+        margin: 0 10rem 20rem 10rem;
         width: auto; } }
   .showcase_btn {
     background-color: #3d3d3e;
